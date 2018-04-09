@@ -16,3 +16,4 @@ if (mysqli_query($connessione, $sql)) {
 mysqli_close($connessione);
 
 ?> 
+ 
