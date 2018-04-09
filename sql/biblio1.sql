@@ -928,7 +928,7 @@ INSERT INTO `biblio_autore` (`AUTORECont`, `AUTORECognome`, `AUTORENome`) VALUES
 (1491, 'COLLINS                       ', 'GARFIELD            '),
 (1492, 'TEBBS                         ', 'DAVID               '),
 (1493, 'Bowman                        ', 'Daniel J.           '),
-(1494, 'BOOCH                         ', 'GRADY               '),
+(1494, 'BOOCH                         ', 'GRADY               '), 
 (1496, 'DELEUZE                       ', 'GILLES              '),
 (1497, 'CANCRINI                      ', 'LUIGI               '),
 (1499, 'BUSCAGLIA                     ', 'LEO                 '),
