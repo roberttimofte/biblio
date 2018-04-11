@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 
+<?php
+session_start();
+if(!isset($_SESSION['login_user'])){
+	session_destroy();
+	session_start();
+	$_SESSION['login_error'] = "Username o password errati";
+    header("Location: ../index.php");
+} else {
+	if($_SESSION['login_user'] == "0")  {
+		session_destroy();
+		session_start();
+		$_SESSION['login_error'] = "Username o password errati";
+		header("Location: ../index.php");
+    }
+}
+?>
+
 <html>
 
 	<head>
@@ -187,8 +204,94 @@
 						<div class="modal-cont">
 							<div class="modal-body">
 								<span id="close1" class="close">&times;</span><br>
-								<p>Some text in the Modal Body</p>
-								<p>Some other text...</p>
+								<div class="container">
+		
+									</br><h2>Inserisci editrice</h2></br>
+									
+									<form id="insert_editor">
+									
+										<div class="form-group row">
+											<label for="ragione_sociale" class="col-sm-2 col-form-label">Ragione sociale</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" placeholder="ragione sociale" name="rag_soc">
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<label for="indirizzo" class="col-sm-2 col-form-label">Indirizzo</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" placeholder="indirizzo" name="indirizzo">
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<label for="cap" class="col-sm-2 col-form-label">Cap</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" placeholder="cap" name="cap">
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<label for="cap" class="col-sm-2 col-form-label">Città</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" placeholder="città" name="citta">
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<label for="rappr" class="col-sm-2 col-form-label">Rappresentante</label>
+											<div class="col-sm-8">
+												<select class="form-control" id="rappr" name="rappr">
+													<option></option>
+													<?php
+													?>
+												</select>
+											</div>
+										</div>
+										
+										<div class="form-group row">
+											<div class="offset-sm-2 col-sm-10">
+												<button type="submit" class="btn btn-primary" value="Send">Inserisci</button>
+											</div>
+										</div>
+
+										<div class="" id="alert_editor" style="visibility:hidden;">
+											<p id="alert_msg_editor"></p>
+										</div>
+										
+									</form>
+								</div>
+								<!--<script>
+									$(function() {
+										$('#insert_editor').submit(function() {
+											$.ajax({
+												type: 'POST',
+												url: 'insert_author.php',
+												data: $(this).serialize(),
+												success: function(data) {
+													if (data == "ok"){
+														$('#alert_editor').show();
+														$('#alert_editor').attr("class", "alert alert-success a");
+														$('#alert_msg_editor').text('Ok! Libro inserito');
+														$('#alert_editor').css({
+														visibility:'visible'
+														});
+														$('#alert_editor').delay(1000).fadeOut();
+													}else{
+														$('#alert_editor').show();
+														$('#alert_editor').attr("class", "alert alert-danger");
+														$('#alert_msg_editor').text('Opss! Si è verificato un problema');
+														$('#alert_editor').css({
+														visibility:'visible'
+														});
+														$('#alert_ed').delay(1000).fadeOut();
+													}  
+												}
+											});
+											return false;
+										}); 
+									})
+								</script>-->
 							</div>
 						</div>
 					</div>
@@ -200,11 +303,11 @@
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="anno edizione" name="anno_edizione">
 					</div>
-					<label for="luogo_edizione" class="col-sm-2 col-form-label">Luogo edizione</label>
+					<label for="luogo_edizione" class="col-sm-2 col-form-label" style="text-align: right">Luogo edizione</label>
 					<div class="col-sm-3">
 						<input type="text" class="form-control" placeholder="luogo edizione" name="luogo_edizione">
 					</div>
-					<label for="num_edizione" class="col-sm-2 col-form-label">Num edizione</label>
+					<label for="num_edizione" class="col-sm-2 col-form-label" style="text-align: right">Num edizione</label>
 					<div class="col-sm-1">
 						<input type="text" class="form-control" placeholder="num" name="num_edizione">
 					</div>
@@ -222,11 +325,11 @@
 					<div class="col-sm-1">
 						<input type="text" class="form-control" placeholder="n vol" name="num_volume">
 					</div>
-					<label for="totale_volumi" class="col-sm-2 col-form-label">Totale volumi</label>
+					<label for="totale_volumi" class="col-sm-2 col-form-label" style="text-align: right">Totale volumi</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="tot vol" name="tot_volumi">
 					</div>
-					<label for="numero_pagine" class="col-sm-2 col-form-label">Numero pagine</label>
+					<label for="numero_pagine" class="col-sm-2 col-form-label" style="text-align: right">Numero pagine</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="n pag" name="num_paginee">
 					</div>
@@ -266,11 +369,11 @@
 							?>
 						</select>
 					</div>
-					<label for="progr" class="col-sm-1 col-form-label">Progr</label>
+					<label for="progr" class="col-sm-1 col-form-label" style="text-align: right">Progr</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="progr" name="progr">
 					</div>
-					<label for="num" class="col-sm-1 col-form-label">Num</label>
+					<label for="num" class="col-sm-1 col-form-label" style="text-align: right">Num</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="num" name="num">
 					</div>
@@ -310,7 +413,7 @@
 								
 									</br><h2>Inserisci autore</h2></br>
 									
-									<form>
+									<form id="insert_author">
 									
 										<div class="form-group row">
 											<label for="titolo" class="col-sm-2 col-form-label">Cognome</label>
@@ -342,7 +445,7 @@
 								
 								<script>
 									$(function() {
-										$('form').submit(function() {
+										$('#insert_author').submit(function() {
 											$.ajax({
 												type: 'POST',
 												url: 'insert_author.php',
@@ -391,7 +494,7 @@
 		</div>
 		
 		<!--<h1 align="center">WORK IN PROGRESS</h1>-->
-		<script>
+		<!--<script>
 			$(function() {
 				$('#insert_book').submit(function() {
 					$.ajax({
@@ -421,7 +524,7 @@
 					return false;
 				}); 
 			})
-		</script>
+		</script>-->
 		
 		<script>
 		// Get the modal
@@ -467,4 +570,4 @@
 
 	</body>
 
-</html> 
+</html>
