@@ -1,6 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <?php
 session_start();
+
+$_SESSION['login_user'] = 0;
 ?>
 <html>
 
@@ -29,7 +31,7 @@ session_start();
 			
 		<div class="form-style-6">
 			<h1>Accedi</h1>
-			<form action="php/login.php" method="POST">
+			<form action="php/ldap_login.php" method="POST">
 				<input type="text" name="username" placeholder="username" required>
 				<input type="password" name="password" placeholder="password" required>
 				<input type="submit" name="login" value="Conferma"/>
@@ -53,11 +55,11 @@ session_start();
 		  </div>
 		</div>
 
-		<script>
+		<!--script>
 			$(".btn.btn-dark").click(function() {
 				window.location = "php/inserisci_libro.php";
 			});
-		</script>
+		</script>-->
 
 	</body>
 
