@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <?php
 session_start();
@@ -125,7 +125,7 @@ if(!isset($_SESSION['login_user'])){
 		
 			</br><h2>Inserisci libro</h2></br>
 			
-			<form id="insert_book">
+			<form id="insert_book" method="POST">
 				
 				<div class="form-group row">
 					<label for="titolo" class="col-sm-2 col-form-label">Titolo</label>
@@ -208,7 +208,7 @@ if(!isset($_SESSION['login_user'])){
 		
 									</br><h2>Inserisci editrice</h2></br>
 									
-									<form id="insert_editor">
+									<form id="insert_editor" method="POST">
 									
 										<div class="form-group row">
 											<label for="ragione_sociale" class="col-sm-2 col-form-label">Ragione sociale</label>
@@ -413,7 +413,7 @@ if(!isset($_SESSION['login_user'])){
 								
 									</br><h2>Inserisci autore</h2></br>
 									
-									<form id="insert_author">
+									<form id="insert_author" method="POST">
 									
 										<div class="form-group row">
 											<label for="titolo" class="col-sm-2 col-form-label">Cognome</label>
@@ -443,7 +443,7 @@ if(!isset($_SESSION['login_user'])){
 									
 								</div>
 								
-								<script>
+								<!--<script>
 									$(function() {
 										$('#insert_author').submit(function() {
 											$.ajax({
@@ -473,7 +473,7 @@ if(!isset($_SESSION['login_user'])){
 											return false;
 										}); 
 									})
-								</script>
+								</script>-->
 							</div>
 						</div>
 					</div>
