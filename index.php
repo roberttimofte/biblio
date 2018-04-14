@@ -44,7 +44,7 @@ $_SESSION['login_user'] = 0;
 			?>
 		</div><br><br>
 		
-		<div align="center">
+		<!--<div align="center">
 			<span style="color: #ffffff; text-align: center; font-family: 'Garamond'; font-size: 50px;">Oppure</span>
 		</div>
 		
@@ -53,7 +53,7 @@ $_SESSION['login_user'] = 0;
 			  <span class="icon"><i class="fa fa-search"></i></span>
 			  <input type="search" id="search" placeholder="Cerca..." />
 		  </div>
-		</div>
+		</div>-->
 
 		<!--script>
 			$(".btn.btn-dark").click(function() {
