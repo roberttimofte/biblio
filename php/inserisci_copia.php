@@ -37,7 +37,7 @@
 		
 			</br><h2>Inserisci copia</h2></br>
 			
-			<form>
+			<form method="POST">
 			
 				<div class="form-group row">
 					<label for="titolo" class="col-sm-2 col-form-label">Libro</label>
@@ -138,4 +138,4 @@
 
 	</body>
 
-</html> 
+</html>
