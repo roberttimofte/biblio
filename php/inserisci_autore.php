@@ -37,7 +37,7 @@
 		
 			</br><h2>Inserisci autore</h2></br>
 			
-			<form>
+			<form method="POST">
 			
 				<div class="form-group row">
 					<label for="titolo" class="col-sm-2 col-form-label">Cognome</label>
@@ -101,4 +101,4 @@
 
 	</body>
 
-</html> 
+</html>
