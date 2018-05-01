@@ -31,7 +31,6 @@ $progr = $_POST['progr'];
 $num = $_POST['num'];
 $autore = $_POST['autore'];
 
-
 $sql = "INSERT INTO biblio_mat (MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstaract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
 
 if (mysqli_query($connessione, $sql)) {

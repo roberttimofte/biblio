@@ -6,7 +6,7 @@ $inv_generale = $_POST['inv_generale'];
 $collocazione = $_POST['collocazione'];
 $posto = $_POST['posto'];
 
-$sql = "INSERT INTO copie (libro, inv_generale, collocazione, posto)  VALUES ('$libro', '$inv_generale', '$collocazione', '$posto')";
+$sql = "";
 
 if (mysqli_query($connessione, $sql)) {
     echo "ok";
