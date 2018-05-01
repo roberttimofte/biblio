@@ -17,17 +17,17 @@ $_SESSION['login_user'] = 0;
 		<link rel="stylesheet" href="css/form-style.css">
 		<link rel="stylesheet" href="css/search-bar-style.css">
 
-		
 		<title>BIBLIO</title>
 
 	</head>
 
 	<body style="background-image: url(img/bg.jpg); background-size: cover; background-repeat: no-repeat">
-	
-		<div align="center" style="font-family: sans-serif; font-size: 3em; font-weight: 100; letter-spacing: 0.40em; text-align: center;">
+		
+		<div align="center" style="font-family: sans-serif; font-size: 3em; font-weight: 100; letter-spacing: 0.40em; text-align: center; display: inline-center">
 			<!--<h1 style="color: white">BIBLIO</h1>-->
 			<img src="img/logo.png" width="500px"/>
-		</div><br>
+		</div> 
+
 			
 		<div class="form-style-6">
 			<h1>Accedi</h1>
@@ -45,6 +45,12 @@ $_SESSION['login_user'] = 0;
 		</div><br><br>
 		
 		<!--<div align="center">
+			<form action="http://apps.marconivr.it/">
+				<input type="submit" value="Cerca libri"/>
+			</form>
+		</div>-->
+		
+		<!--<div align="center">
 			<span style="color: #ffffff; text-align: center; font-family: 'Garamond'; font-size: 50px;">Oppure</span>
 		</div>
 		
@@ -55,8 +61,8 @@ $_SESSION['login_user'] = 0;
 		  </div>
 		</div>-->
 
-		<!--script>
-			$(".btn.btn-dark").click(function() {
+		<!--<script>
+			$(".btn btn-light").click(function() {
 				window.location = "php/inserisci_libro.php";
 			});
 		</script>-->
