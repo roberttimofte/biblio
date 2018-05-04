@@ -52,7 +52,7 @@
 								
 								if (mysqli_num_rows($result) > 0) {
 									while($row = mysqli_fetch_assoc($result)) {
-										echo "<option value=" . $row["MATCont"] . ">" . $row["MATTitolo"] . "</option>";
+										echo "<option value=" . $row['MATCont'] . ">" . $row["MATTitolo"] . "</option>";
 									}
 								} else {
 									echo "<option>None</option>";

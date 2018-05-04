@@ -388,12 +388,12 @@ if(!isset($_SESSION['login_user'])){
 							<?php
 								include 'db_connection.php';
 								
-								$sql = "SELECT AUTORECognome, AUTORENome FROM biblio_autore";
+								$sql = "SELECT AUTORECont, AUTORECognome, AUTORENome FROM biblio_autore";
 								$result = mysqli_query($connessione, $sql);
 								
 								if (mysqli_num_rows($result) > 0) {
 									while($row = mysqli_fetch_assoc($result)) {
-										echo "<option>" . $row["AUTORECognome"] . " " . $row["AUTORENome"] . "</option>";
+										echo "<option value=" . $row["AUTORECont"] . ">" . $row["AUTORECognome"] . " " . $row["AUTORENome"] . "</option>";
 									}
 								} else {
 									echo "<option>None</option>";

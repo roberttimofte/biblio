@@ -3,16 +3,8 @@ include 'db_connection.php';
 
 $titolo = $_POST['titolo'];
 $sottotitolo = $_POST['sottotitolo'];
-if(isset($_POST['type'])) {
-	$tipo = $_POST['type'];
-} else {
-	$tipo = '';
-}
-if(isset($_POST['editrice'])) {
-	$editrice = $_POST['editrice'];
-} else {
-	$editrice = '';
-}
+$tipo = $_POST['type'];
+$editrice = $_POST['editrice'];
 $anno = $_POST['anno_edizione'];
 $luogo = $_POST['luogo_edizione'];
 $num_edizione = $_POST['num_edizione'];
@@ -22,14 +14,24 @@ $tot_vol = $_POST['tot_volumi'];
 $num_pagine = $_POST['num_pagine'];
 $abstract = $_POST['abstract'];
 $inv = $_POST['inv'];
-if(isset($_POST['collocazione'])) {
-	$collocazione = $_POST['collocaione'];
-} else {
-	$collocazione = '';
-}
+$collocazione = $_POST['collocaione'];
+$collocazione = '';
 $progr = $_POST['progr'];
 $num = $_POST['num'];
 $autore = $_POST['autore'];
+
+$auth = "";
+
+$sql1 = "SELECT AUTORECognome, AUTORENome FROM biblio_autore WHERE AUTORECont = " . $autore;
+$result1 = mysqli_query($connessione, $sql1);
+								
+if (mysqli_num_rows($result1) > 0) {
+	while($row = mysqli_fetch_assoc($result1)) {
+		$auth = "";
+	}
+} else {
+	$auth = "";
+}
 
 $sql = "INSERT INTO biblio_mat (MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstaract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
 
