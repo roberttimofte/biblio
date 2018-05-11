@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `biblio_invent` (
-  `INVENTNum` varchar(10) NOT NULL,
-  `INVENTISBN` varchar(13) NOT NULL,
-  `INVENTDataAcquisto` datetime NOT NULL,
-  `INVENTPrezzo` int(11) NOT NULL,
-  `INVENTGenerale` varchar(7) NOT NULL
+  `INVENTNum` varchar(10),
+  `INVENTISBN` varchar(13),
+  `INVENTDataAcquisto` datetime,
+  `INVENTPrezzo` int(11),
+  `INVENTGenerale` varchar(7)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -19663,14 +19663,14 @@ INSERT INTO `biblio_invent` (`INVENTNum`, `INVENTISBN`, `INVENTDataAcquisto`, `I
 
 CREATE TABLE `biblio_matcomp` (
   `MATCOMPCont` int(11) NOT NULL,
-  `MATCOMPTitolo` varchar(100) NOT NULL,
-  `MATCOMPAnnoEdizione` int(11) NOT NULL,
-  `MATCOMPLuogoEdizione` varchar(50) NOT NULL,
-  `MATCOMPNumEdizione` varchar(10) NOT NULL,
-  `MATCOMPNumPagine` int(11) NOT NULL,
-  `MATCOMPAbstract` varchar(255) NOT NULL,
-  `MATCOMPSottotitolo` varchar(255) NOT NULL,
-  `MATCont` int(11) NOT NULL
+  `MATCOMPTitolo` varchar(100),
+  `MATCOMPAnnoEdizione` int(11),
+  `MATCOMPLuogoEdizione` varchar(50),
+  `MATCOMPNumEdizione` varchar(10),
+  `MATCOMPNumPagine` int(11),
+  `MATCOMPAbstract` varchar(255),
+  `MATCOMPSottotitolo` varchar(255),
+  `MATCont` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -19717,12 +19717,12 @@ INSERT INTO `biblio_matcomp` (`MATCOMPCont`, `MATCOMPTitolo`, `MATCOMPAnnoEdizio
 --
 
 CREATE TABLE `biblio_prestito` (
-  `PRESTCount` int(11) NOT NULL,
-  `COPIACont` int(11) NOT NULL,
-  `UTE_BIBLIO` varchar(40) NOT NULL,
-  `PRESTData` datetime NOT NULL,
-  `PRESTDataRestIpo` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `PRESTDataRestEff` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `PRESTCount` int(11),
+  `COPIACont` int(11),
+  `UTE_BIBLIO` varchar(40),
+  `PRESTData` datetime,
+  `PRESTDataRestIpo` datetime,
+  `PRESTDataRestEff` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

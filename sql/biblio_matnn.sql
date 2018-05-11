@@ -30,20 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biblio_matnn` (
   `MATCont` int(11) NOT NULL,
-  `MATTitolo` varchar(100) NOT NULL,
-  `TIPOMATCont` int(11) NOT NULL,
-  `EDITRICECont` int(11) NOT NULL,
-  `MATAnnoEdizione` int(11) NOT NULL,
-  `MATLuogoEdizione` varchar(50) NOT NULL,
-  `MATNumEdizione` int(11) NOT NULL,
-  `DEWCodice` int(11) NOT NULL,
-  `MATISBN` int(13) NOT NULL,
-  `MATNumVolume` int(11) NOT NULL,
-  `MATTotVolumi` int(11) NOT NULL,
-  `MATNumPagine` int(11) NOT NULL,
-  `MATAbstract` varchar(255) NOT NULL,
-  `MATSottotitolo` varchar(50) NOT NULL,
-  `DateLog` datetime NOT NULL
+  `MATTitolo` varchar(100),
+  `TIPOMATCont` int(11),
+  `EDITRICECont` int(11),
+  `MATAnnoEdizione` int(11),
+  `MATLuogoEdizione` varchar(50),
+  `MATNumEdizione` int(11),
+  `DEWCodice` int(11),
+  `MATISBN` varchar(13),
+  `MATNumVolume` int(11),
+  `MATTotVolumi` int(11),
+  `MATNumPagine` int(11),
+  `MATAbstract` varchar(255),
+  `MATSottotitolo` varchar(50),
+  `DateLog` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

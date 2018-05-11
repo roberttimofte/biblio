@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biblio_autore` (
   `AUTORECont` int(11) NOT NULL,
-  `AUTORECognome` varchar(30) NOT NULL,
-  `AUTORENome` varchar(20) NOT NULL
+  `AUTORECognome` varchar(30),
+  `AUTORENome` varchar(20)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3968,8 +3968,8 @@ INSERT INTO `biblio_autore` (`AUTORECont`, `AUTORECognome`, `AUTORENome`) VALUES
 --
 
 CREATE TABLE `biblio_autore_mat` (
-  `AUTORECont` int(11) NOT NULL,
-  `MATCont` int(11) NOT NULL
+  `AUTORECont` int(11),
+  `MATCont` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -11977,8 +11977,8 @@ INSERT INTO `biblio_autore_mat` (`AUTORECont`, `MATCont`) VALUES
 --
 
 CREATE TABLE `biblio_autore_matcomp` (
-  `AUTORECont` int(11) NOT NULL,
-  `MATCOMPC` int(11) NOT NULL
+  `AUTORECont` int(11),
+  `MATCOMPC` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -12027,7 +12027,7 @@ INSERT INTO `biblio_autore_matcomp` (`AUTORECont`, `MATCOMPC`) VALUES
 --
 
 CREATE TABLE `biblio_coll` (
-  `COLLDescr` varchar(5) NOT NULL
+  `COLLDescr` varchar(5)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

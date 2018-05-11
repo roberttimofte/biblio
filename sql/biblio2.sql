@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biblio_copia` (
   `COPIACont` int(11) NOT NULL,
-  `MATCont` int(11) NOT NULL,
-  `INVENTNum` varchar(10) NOT NULL,
-  `COPIACollocazione` varchar(5) NOT NULL,
-  `Progressivo` varchar(5) NOT NULL,
-  `INVENTGen` varchar(10) NOT NULL
+  `MATCont` int(11),
+  `INVENTNum` varchar(10),
+  `COPIACollocazione` varchar(5),
+  `Progressivo` varchar(5),
+  `INVENTGen` varchar(10)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -9340,12 +9340,12 @@ INSERT INTO `biblio_copia` (`COPIACont`, `MATCont`, `INVENTNum`, `COPIACollocazi
 
 CREATE TABLE `biblio_copiacollocata` (
   `Cont` int(11) NOT NULL,
-  `Titolo` varchar(100) NOT NULL,
-  `Inv` varchar(10) NOT NULL,
-  `Coll` varchar(5) NOT NULL,
-  `Prog` varchar(5) NOT NULL,
-  `ISBN` varchar(13) NOT NULL,
-  `Expr1` int(11) NOT NULL
+  `Titolo` varchar(100),
+  `Inv` varchar(10),
+  `Coll` varchar(5),
+  `Prog` varchar(5),
+  `ISBN` varchar(13),
+  `Expr1` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

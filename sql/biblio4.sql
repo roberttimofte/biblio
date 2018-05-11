@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biblio_elencomat` (
   `MATCont` int(11) NOT NULL,
-  `MATTitolo` varchar(100) NOT NULL,
-  `EDITRICERagSoc` varchar(50) NOT NULL,
-  `MATISBN` varchar(13) NOT NULL
+  `MATTitolo` varchar(100),
+  `EDITRICERagSoc` varchar(50),
+  `MATISBN` varchar(13)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

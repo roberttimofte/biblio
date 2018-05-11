@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biblio_descr` (
   `DESCRCont` int(11) NOT NULL,
-  `DESCRDescrizione` varchar(100) NOT NULL,
-  `DESCRSpiegazione` varchar(100) NOT NULL,
-  `DESCRMotivazione` varchar(100) NOT NULL
+  `DESCRDescrizione` varchar(100),
+  `DESCRSpiegazione` varchar(100),
+  `DESCRMotivazione` varchar(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -192,9 +192,9 @@ INSERT INTO `biblio_descr` (`DESCRCont`, `DESCRDescrizione`, `DESCRSpiegazione`,
 --
 
 CREATE TABLE `biblio_descr_mat` (
-  `DESCRCont` int(11) NOT NULL,
-  `MATCont` int(11) NOT NULL,
-  `DESCR_MATNote` varchar(30) NOT NULL
+  `DESCRCont` int(11),
+  `MATCont` int(11),
+  `DESCR_MATNote` varchar(30)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1094,7 +1094,7 @@ INSERT INTO `biblio_descr_mat` (`DESCRCont`, `MATCont`, `DESCR_MATNote`) VALUES
 
 CREATE TABLE `biblio_dew` (
   `DEWCodice` int(11) NOT NULL,
-  `DEWDescrizione` varchar(50) NOT NULL
+  `DEWDescrizione` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1114,11 +1114,11 @@ INSERT INTO `biblio_dew` (`DEWCodice`, `DEWDescrizione`) VALUES
 
 CREATE TABLE `biblio_editrice` (
   `EDITRICECont` int(11) NOT NULL,
-  `EDITRICERagSoc` varchar(50) NOT NULL,
-  `EDITRICEIndirizzo` varchar(30) NOT NULL,
-  `EDITRICECap` varchar(5) NOT NULL,
-  `EDITRICECitta` varchar(30) NOT NULL,
-  `RAPPRCont` int(11) NOT NULL
+  `EDITRICERagSoc` varchar(50),
+  `EDITRICEIndirizzo` varchar(30),
+  `EDITRICECap` varchar(5),
+  `EDITRICECitta` varchar(30),
+  `RAPPRCont` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -2049,10 +2049,10 @@ INSERT INTO `biblio_editrice` (`EDITRICECont`, `EDITRICERagSoc`, `EDITRICEIndiri
 
 CREATE TABLE `biblio_elencocopie` (
   `COPIACont` int(11) NOT NULL,
-  `MATCont` int(11) NOT NULL,
-  `INVENTNum` varchar(10) NOT NULL,
-  `COPIACollocazione` varchar(5) NOT NULL,
-  `Progressivo` varchar(5) NOT NULL
+  `MATCont` int(11),
+  `INVENTNum` varchar(10),
+  `COPIACollocazione` varchar(5),
+  `Progressivo` varchar(5)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
