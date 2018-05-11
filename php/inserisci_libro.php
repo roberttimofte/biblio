@@ -176,7 +176,7 @@ if(!isset($_SESSION['login_user'])){
 				
 				<div class="form-group row">
 					<label for="editrice" class="col-sm-2 col-form-label">Casa editrice</label>
-					<div class="col-sm-8 ">
+					<div class="col-sm-8">
 						<select class="form-control" id="editrice" name="editrice">
 							<option></option>
 							<?php

@@ -14,8 +14,7 @@ $tot_vol = $_POST['tot_volumi'];
 $num_pagine = $_POST['num_pagine'];
 $abstract = $_POST['abstract'];
 $inv = $_POST['inv'];
-$collocazione = $_POST['collocaione'];
-$collocazione = '';
+$collocazione = $_POST['collocazione'];
 $progr = $_POST['progr'];
 $num = $_POST['num'];
 $autore = $_POST['autore'];
@@ -33,12 +32,12 @@ if (mysqli_num_rows($result1) > 0) {
 	$auth = "";
 }
 
-$sql = "INSERT INTO biblio_mat (MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstaract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
+$sql = "INSERT INTO biblio_matnn (MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, DEWCodice, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, 0, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
 
 if (mysqli_query($connessione, $sql)) {
     echo "ok";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($connessione);
+	echo "Error: " . $sql . "<br>" . mysqli_error($connessione);
 }
 
 mysqli_close($connessione);
