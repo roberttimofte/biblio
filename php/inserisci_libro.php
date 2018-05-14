@@ -119,6 +119,7 @@ if(!isset($_SESSION['login_user'])){
 					<a class="nav-link" href="inserisci_copia.php">Inserisci copia</a>
 				</li>
 			</ul>
+			
 		</nav>
 		
 		<div class="container">
@@ -197,105 +198,7 @@ if(!isset($_SESSION['login_user'])){
 							?>
 						</select>
 					</div>
-					<input type="button" id="myBtn" value="Inserisci editrice">
-					
-					<div id="myModal" class="modal">
-					  <!-- Modal content -->
-						<div class="modal-cont">
-							<div class="modal-body">
-								<span id="close1" class="close">&times;</span><br>
-								<div class="container">
-		
-									</br><h2>Inserisci editrice</h2></br>
-									
-									<!--<form id="insert_editor">
-									
-										<div class="form-group row">
-											<label for="ragione_sociale" class="col-sm-2 col-form-label">Ragione sociale</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="ragione sociale" name="rag_soc">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label for="indirizzo" class="col-sm-2 col-form-label">Indirizzo</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="indirizzo" name="indirizzo">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label for="cap" class="col-sm-2 col-form-label">Cap</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="cap" name="cap">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label for="cap" class="col-sm-2 col-form-label">Città</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="città" name="citta">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label for="rappr" class="col-sm-2 col-form-label">Rappresentante</label>
-											<div class="col-sm-8">
-												<select class="form-control" id="rappr" name="rappr">
-													<option></option>
-													<?php
-													?>
-												</select>
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<div class="offset-sm-2 col-sm-10">
-												<button type="submit" class="btn btn-primary" value="Send">Inserisci</button>
-											</div>
-										</div>
-
-										<div class="" id="alert_editor" style="visibility:hidden;">
-											<p id="alert_msg_editor"></p>
-										</div>
-										
-									</form>
-								</div>
-								<!--<script>
-									$(function() {
-										$('#insert_editor').submit(function() {
-											$.ajax({
-												type: 'POST',
-												url: 'insert_author.php',
-												data: $(this).serialize(),
-												success: function(data) {
-													if (data == "ok"){
-														$('#alert_editor').show();
-														$('#alert_editor').attr("class", "alert alert-success a");
-														$('#alert_msg_editor').text('Ok! Libro inserito');
-														$('#alert_editor').css({
-														visibility:'visible'
-														});
-														$('#alert_editor').delay(1000).fadeOut();
-													}else{
-														$('#alert_editor').show();
-														$('#alert_editor').attr("class", "alert alert-danger");
-														$('#alert_msg_editor').text('Opss! Si è verificato un problema');
-														$('#alert_editor').css({
-														visibility:'visible'
-														});
-														$('#alert_ed').delay(1000).fadeOut();
-													}  
-												}
-											});
-											return false;
-										}); 
-									})
-								</script>-->
-								</div>
-							</div>
-						</div>
-					</div>
+					<input type="button" id="myBtn" value="Inserisci editrice">	
 				</div>
 				
 				
@@ -404,81 +307,6 @@ if(!isset($_SESSION['login_user'])){
 						</select>
 					</div>
 					<input type="button" id="myBtn2" value="Nuovo autore">
-					
-					<div id="myModal2" class="modal">
-					  <!-- Modal content -->
-						<div class="modal-cont">
-							<div class="modal-body">
-								<span id="close2" class="close">&times;</span><br>
-								<div class="container">
-								
-									</br><h2>Inserisci autore</h2></br>
-									
-									<!--<form id="insert_author">
-									
-										<div class="form-group row">
-											<label for="titolo" class="col-sm-2 col-form-label">Cognome</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="cognome" name="cognome">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label for="autore" class="col-sm-2 col-form-label">Nome</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" placeholder="nome" name="nome">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<div class="offset-sm-2 col-sm-10">
-												<button type="submit" class="btn btn-primary" value="Send">Inserisci</button>
-											</div>
-										</div>
-
-										<div class="" id="alert_author" style="visibility:hidden;">
-											<p id="alert_msg_author"></p>
-										</div>
-										
-									</form>
-									
-								</div>
-								
-								<!--<script>
-									$(function() {
-										$('#insert_author').submit(function() {
-											$.ajax({
-												type: 'POST',
-												url: 'insert_author.php',
-												data: $(this).serialize(),
-												success: function(data) {
-													if (data == "ok"){
-														$('#alert_author').show();
-														$('#alert_author').attr("class", "alert alert-success a");
-														$('#alert_msg_author').text('Ok! Autore inserito');
-														$('#alert_author').css({
-														visibility:'visible'
-														});
-														$('#alert_author').delay(1000).fadeOut();
-													}else{
-														$('#alert_author').show();
-														$('#alert_author').attr("class", "alert alert-danger");
-														$('#alert_msg_author').text('Opss! Si è verificato un problema');
-														$('#alert_author').css({
-														visibility:'visible'
-														});
-														$('#alert_author').delay(1000).fadeOut();
-													}  
-												}
-											});
-											return false;
-										}); 
-									})
-								</script>-->
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 
 				<div class="form-group row">
@@ -522,10 +350,181 @@ if(!isset($_SESSION['login_user'])){
 					}); 
 				})
 				</script>
-				
+		
 			</form>
-				
+			
 		</div>
+		
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-cont">
+				<div class="modal-body">
+					<span id="close1" class="close">&times;</span><br>
+					<div class="container">
+	
+						</br><h2>Inserisci editrice</h2></br>
+								
+						<form id="insert_editor">
+						
+							<div class="form-group row">
+								<label for="ragione_sociale" class="col-sm-2 col-form-label">Ragione sociale</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="ragione sociale" name="rag_soc">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="indirizzo" class="col-sm-2 col-form-label">Indirizzo</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="indirizzo" name="indirizzo">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="cap" class="col-sm-2 col-form-label">Cap</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="cap" name="cap">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="cap" class="col-sm-2 col-form-label">Città</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="città" name="citta">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="rappr" class="col-sm-2 col-form-label">Rappresentante</label>
+								<div class="col-sm-8">
+									<select class="form-control" id="rappr" name="rappr">
+										<option></option>
+										<?php
+										?>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="offset-sm-2 col-sm-10">
+									<button type="submit" class="btn btn-primary" value="Send">Inserisci</button>
+								</div>
+							</div>
+
+							<div class="" id="alert_editor" style="visibility:hidden;">
+								<p id="alert_msg_editor"></p>
+							</div>
+							
+						</form>
+					</div>
+					<script>
+						$(function() {
+							$('#insert_editor').submit(function() {
+								$.ajax({
+									type: 'POST',
+									url: 'insert_editor.php',
+									data: $(this).serialize(),
+									success: function(data) {
+										if (data == "ok"){
+											$('#alert_editor').show();
+											$('#alert_editor').attr("class", "alert alert-success a");
+											$('#alert_msg_editor').text('Ok! Editrice inserita');
+											$('#alert_editor').css({
+											visibility:'visible'
+											});
+											$('#alert_editor').delay(1000).fadeOut();
+										}else{
+											$('#alert_editor').show();
+											$('#alert_editor').attr("class", "alert alert-danger");
+											$('#alert_msg_editor').text('Opss! Si è verificato un problema');
+											$('#alert_editor').css({
+											visibility:'visible'
+											});
+											$('#alert_editor').delay(1000).fadeOut();
+										}  
+									}
+								});
+								return false;
+							}); 
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<div id="myModal2" class="modal">
+		<!-- Modal content -->
+			<div class="modal-cont">
+				<div class="modal-body">
+					<span id="close2" class="close">&times;</span><br>
+					<div class="container">
+							
+						</br><h2>Inserisci autore</h2></br>
+									
+						<form id="insert_author">
+						
+							<div class="form-group row">
+								<label for="titolo" class="col-sm-2 col-form-label">Cognome</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="cognome" name="cognome">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label for="autore" class="col-sm-2 col-form-label">Nome</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" placeholder="nome" name="nome">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="offset-sm-2 col-sm-10">
+									<button type="submit" class="btn btn-primary" value="Send">Inserisci</button>
+								</div>
+							</div>
+
+							<div class="" id="alert_author" style="visibility:hidden;">
+								<p id="alert_msg_author"></p>
+							</div>
+							
+						</form>
+					
+					</div>
+							
+					<script>
+						$(function() {
+							$('#insert_author').submit(function() {
+								$.ajax({
+									type: 'POST',
+									url: 'insert_author.php',
+									data: $(this).serialize(),
+									success: function(data) {
+										if (data == "ok"){
+											$('#alert_author').show();
+											$('#alert_author').attr("class", "alert alert-success a");
+											$('#alert_msg_author').text('Ok! Autore inserito');
+											$('#alert_author').css({
+											visibility:'visible'
+											});
+											$('#alert_author').delay(1000).fadeOut();
+										}else{
+											$('#alert_author').show();
+											$('#alert_author').attr("class", "alert alert-danger");
+											$('#alert_msg_author').text('Opss! Si è verificato un problema');
+											$('#alert_author').css({
+											visibility:'visible'
+											});
+											$('#alert_author').delay(1000).fadeOut();
+										}  
+									}
+								});
+								return false;
+							}); 
+						})
+					</script>
+				</div>
+			</div>
+		</div>		
 		
 		<script>
 		// Get the modal
