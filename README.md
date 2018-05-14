@@ -17,8 +17,9 @@ I software necessari per il corretto funzionamento del progetto sono:
 
 - scaricare la cartella zippata dalla [repository](https://github.com/roberttimofte/biblio) ed estrarre i file in una cartella chiamata 'biblio' all'interno della cartella 'htdocs' di xampp
 - avviare i servizi di Apache e MySQL da xampp
+- aprire il browser e su localhost/phpmyadmin creare il database 'biblio' ed importare i file sql contenuti nella cartella zippata
 - aprire il browser e scrivere nella barra degli indirizzi 'localhost'
-- aprire la cartella 'biblio' dall'interfaccia 
+- aprire la cartella 'biblio' dall'interfaccia di localhost
 
 ### Test
 
