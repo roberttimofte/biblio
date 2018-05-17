@@ -276,7 +276,7 @@ if(!isset($_SESSION['login_user'])){
 					<label for="progr" class="col-sm-1 col-form-label" style="text-align: right">Progr</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="progr" name="progr">
-					</div>
+					</div>					
 					<label for="num" class="col-sm-1 col-form-label" style="text-align: right">Num</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="num" name="num">
@@ -426,6 +426,7 @@ if(!isset($_SESSION['login_user'])){
 									data: $(this).serialize(),
 									success: function(data) {
 										if (data == "ok"){
+											$('#alert').hide();
 											$('#alert_editor').show();
 											$('#alert_editor').attr("class", "alert alert-success a");
 											$('#alert_msg_editor').text('Ok! Editrice inserita');
@@ -434,6 +435,7 @@ if(!isset($_SESSION['login_user'])){
 											});
 											$('#alert_editor').delay(1000).fadeOut();
 										}else{
+											$('#alert').hide();
 											$('#alert_editor').show();
 											$('#alert_editor').attr("class", "alert alert-danger");
 											$('#alert_msg_editor').text('Opss! Si è verificato un problema');
@@ -500,6 +502,7 @@ if(!isset($_SESSION['login_user'])){
 									data: $(this).serialize(),
 									success: function(data) {
 										if (data == "ok"){
+											$('#alert').hide();
 											$('#alert_author').show();
 											$('#alert_author').attr("class", "alert alert-success a");
 											$('#alert_msg_author').text('Ok! Autore inserito');
@@ -508,6 +511,7 @@ if(!isset($_SESSION['login_user'])){
 											});
 											$('#alert_author').delay(1000).fadeOut();
 										}else{
+											$('#alert').hide();
 											$('#alert_author').show();
 											$('#alert_author').attr("class", "alert alert-danger");
 											$('#alert_msg_author').text('Opss! Si è verificato un problema');
