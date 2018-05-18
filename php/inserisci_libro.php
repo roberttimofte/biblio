@@ -94,9 +94,9 @@ if(!isset($_SESSION['login_user'])){
 		</style>
 	
 		<script src="../js/jquery-3.2.1.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
 		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		
 		<title>Inserisci libro</title>
 		
@@ -411,9 +411,9 @@ if(!isset($_SESSION['login_user'])){
 								</div>
 							</div>
 
-							<div class="" id="alert_editor" style="visibility:hidden;">
+							<!--<div class="" id="alert_editor" style="visibility:hidden;">
 								<p id="alert_msg_editor"></p>
-							</div>
+							</div>-->
 							
 						</form>
 					</div>
@@ -426,23 +426,21 @@ if(!isset($_SESSION['login_user'])){
 									data: $(this).serialize(),
 									success: function(data) {
 										if (data == "ok"){
-											$('#alert').hide();
-											$('#alert_editor').show();
-											$('#alert_editor').attr("class", "alert alert-success a");
-											$('#alert_msg_editor').text('Ok! Editrice inserita');
-											$('#alert_editor').css({
+											$('#alert').show();
+											$('#alert').attr("class", "alert alert-success a");
+											$('#alert_msg').text('Ok! Editrice inserita!');
+											$('#alert').css({
 											visibility:'visible'
 											});
-											$('#alert_editor').delay(1000).fadeOut();
+											$('#alert').delay(1000).fadeOut();
 										}else{
-											$('#alert').hide();
-											$('#alert_editor').show();
-											$('#alert_editor').attr("class", "alert alert-danger");
-											$('#alert_msg_editor').text('Opss! Si è verificato un problema');
-											$('#alert_editor').css({
+											$('#alert').show();
+											$('#alert').attr("class", "alert alert-danger");
+											$('#alert_msg').text('Opss! Si è verificato un problema');
+											$('#alert').css({
 											visibility:'visible'
 											});
-											$('#alert_editor').delay(1000).fadeOut();
+											$('#alert').delay(1000).fadeOut();
 										}  
 									}
 								});
@@ -485,9 +483,9 @@ if(!isset($_SESSION['login_user'])){
 								</div>
 							</div>
 
-							<div class="" id="alert_author" style="visibility:hidden;">
+							<!--<div class="" id="alert_author" style="visibility:hidden;">
 								<p id="alert_msg_author"></p>
-							</div>
+							</div>-->
 							
 						</form>
 					
@@ -502,23 +500,21 @@ if(!isset($_SESSION['login_user'])){
 									data: $(this).serialize(),
 									success: function(data) {
 										if (data == "ok"){
-											$('#alert').hide();
-											$('#alert_author').show();
-											$('#alert_author').attr("class", "alert alert-success a");
-											$('#alert_msg_author').text('Ok! Autore inserito');
-											$('#alert_author').css({
+											$('#alert').show();
+											$('#alert').attr("class", "alert alert-success a");
+											$('#alert_msg').text('Ok! Autore inserito!');
+											$('#alert').css({
 											visibility:'visible'
 											});
-											$('#alert_author').delay(1000).fadeOut();
+											$('#alert').delay(1000).fadeOut()
 										}else{
-											$('#alert').hide();
-											$('#alert_author').show();
-											$('#alert_author').attr("class", "alert alert-danger");
-											$('#alert_msg_author').text('Opss! Si è verificato un problema');
-											$('#alert_author').css({
+											$('#alert').show();
+											$('#alert').attr("class", "alert alert-danger");
+											$('#alert_msg').text('Opss! Si è verificato un problema');
+											$('#alert').css({
 											visibility:'visible'
 											});
-											$('#alert_author').delay(1000).fadeOut();
+											$('#alert').delay(1000).fadeOut();
 										}  
 									}
 								});
