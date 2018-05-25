@@ -5,7 +5,7 @@ session_start();
 $domain = 'edu.marconi';
 $username =  $_POST["username"];       // prendo le credenziali dal form
 $password = $_POST["password"];
-$ldapconfig['host'] = 'edu-a02';	//edu-rodc è l'host corretto, edu-a02 viene usato momentaneamente
+$ldapconfig['host'] = 'edu-rodc';	
 $ldapconfig['port'] = 389;            // Porta fissa per l'LDAP
 $ldapconfig['basedn'] = 'dc=edu,dc=marconi';
 
