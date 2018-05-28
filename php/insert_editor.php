@@ -7,7 +7,7 @@ $cap = $_POST['cap'];
 $citta = $_POST['citta'];
 $rappr = $_POST['rappr'];
 
-$sql = "INSERT INTO biblio_editrice(EDITRICERagSoc, EDITRICEIndirizzo, EDITRICECap, EDITRICECitta, RAPPRCont) VALUES ('$ragsoc', '$indirizzo', '$cap', '$citta', 0)";
+$sql = "INSERT INTO biblio_editrice(EDITRICERagSoc, EDITRICEIndirizzo, EDITRICECap, EDITRICECitta, RAPPRCont) VALUES ('$ragsoc', '$indirizzo', '$cap', '$citta', $rappr)";
 
 if (mysqli_query($connessione, $sql)) {
     echo "ok";

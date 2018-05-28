@@ -144,34 +144,28 @@ if(!isset($_SESSION['login_user'])){
 				
 				<div class="form-group row">
 					<label for="tipo_materiale" class="col-sm-3 col-form-label">Tipo materiale</label>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="1" name="type">
-						<label class="form-check-label">Libro</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="2" name="type">
-						<label class="form-check-label">Fotocopia</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="3" name="type">
-						<label class="form-check-label">Dizionario</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="4" name="type">
-						<label class="form-check-label">Rivista</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="5" name="type">
-						<label class="form-check-label">CD-ROM</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="6" name="type">
-						<label class="form-check-label">Dispensa</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value="7" name="type">
-						<label class="form-check-label">Altro</label>
-					</div>
+					<?php
+						include 'db_connection.php';
+						
+						$sql = "SELECT TIPOMATCont, TIPOMATDescrizione FROM biblio_tipomat";
+						$result = mysqli_query($connessione, $sql);
+						
+						if (mysqli_num_rows($result) > 0) {
+							while($row = mysqli_fetch_assoc($result)) {
+								echo "<div class='form-check form-check-inline'>
+										<input class='form-check-input' type='radio' value=". $row["TIPOMATCont"] . " name='type'>
+										<label class='form-check-label'>". $row["TIPOMATDescrizione"] . "</label>
+									</div>";
+							}
+						} else {
+							echo "<div class='form-check form-check-inline'>
+									<input class='form-check-input' type='radio' value='' name='type'>
+									<label class='form-check-label'>none</label>
+								</div>";
+						}
+
+						mysqli_close($connessione);
+					?>
 				</div>
 				
 				
@@ -179,7 +173,7 @@ if(!isset($_SESSION['login_user'])){
 					<label for="editrice" class="col-sm-2 col-form-label">Casa editrice</label>
 					<div class="col-sm-8">
 						<select class="form-control" id="editrice" name="editrice">
-							<option></option>
+							<option disabled selected value></option>
 							<?php
 								include 'db_connection.php';
 								
@@ -194,7 +188,7 @@ if(!isset($_SESSION['login_user'])){
 									echo "<option>None</option>";
 								}
 
-								mysqli_close($conn);
+								mysqli_close($connessione);
 							?>
 						</select>
 					</div>
@@ -254,7 +248,7 @@ if(!isset($_SESSION['login_user'])){
 					<label for="collocazione" class="col-sm-1 col-form-label">Collocazione</label>
 					<div class="col-sm-1">	
 						<select class="form-control" id="collocazione" name="collocazione">
-							<option></option>
+							<option disabled selected value></option>
 							<?php
 								include 'db_connection.php';
 								
@@ -269,7 +263,7 @@ if(!isset($_SESSION['login_user'])){
 									echo "<option>None</option>";
 								}
 
-								mysqli_close($conn);
+								mysqli_close($connessione);
 							?>
 						</select>
 					</div>
@@ -287,7 +281,7 @@ if(!isset($_SESSION['login_user'])){
 					<label for="autore" class="col-sm-2 col-form-label">Autore</label>
 					<div class="col-sm-8">
 						<select class="form-control" id="autore" name="autore">
-							<option></option>
+							<option disabled selected value></option>
 							<?php
 								include 'db_connection.php';
 								
@@ -302,7 +296,7 @@ if(!isset($_SESSION['login_user'])){
 									echo "<option>None</option>";
 								}
 
-								mysqli_close($conn);
+								mysqli_close($connessione);
 							?>
 						</select>
 					</div>
@@ -398,8 +392,22 @@ if(!isset($_SESSION['login_user'])){
 								<label for="rappr" class="col-sm-2 col-form-label">Rappresentante</label>
 								<div class="col-sm-8">
 									<select class="form-control" id="rappr" name="rappr">
-										<option></option>
+										<option disabled selected value></option>
 										<?php
+											include 'db_connection.php';
+											
+											$sql = "SELECT RAPPRCont, RAPPRCognome, RAPPRNome FROM biblio_rappr";
+											$result = mysqli_query($connessione, $sql);
+											
+											if (mysqli_num_rows($result) > 0) {
+												while($row = mysqli_fetch_assoc($result)) {
+													echo "<option value=" . $row["RAPPRCont"] . ">" . $row["RAPPRCognome"] . " " . $row["RAPPRNome"] . "</option>";
+												}
+											} else {
+												echo "<option>None</option>";
+											}
+
+											mysqli_close($connessione);
 										?>
 									</select>
 								</div>

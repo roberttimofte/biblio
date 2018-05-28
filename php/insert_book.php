@@ -32,7 +32,7 @@ if (mysqli_num_rows($result1) > 0) {
 	$auth = "";
 }
 
-$sql = "INSERT INTO biblio_mat (MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, DEWCodice, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, 0, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
+$sql = "INSERT INTO biblio_mat(MATTitolo, TIPOMATCont, EDITRICECont, MATAnnoEdizione, MATLuogoEdizione, MATNumEdizione, DEWCodice, MATISBN, MATNumVolume, MATTotVolumi, MATNumPagine, MATAbstract, MATSottotitolo) VALUES ('$titolo', $tipo, $editrice, $anno, '$luogo', $num_edizione, 0, '$isbn', $num_vol, $tot_vol, $num_pagine, '$abstract', '$sottotitolo')";
 
 if (mysqli_query($connessione, $sql)) {
     echo "ok";

@@ -43,7 +43,7 @@
 					<label for="titolo" class="col-sm-2 col-form-label">Libro</label>
 					<div class="col-sm-4 ">
 						<select class="form-control" id="libri" name="libri">
-							<option></option>
+							<option disabled selected value></option>
 							<?php
 								include 'db_connection.php';
 								
@@ -58,7 +58,7 @@
 									echo "<option>None</option>";
 								}
 
-								mysqli_close($conn);
+								mysqli_close($connessione);
 							?>
 						</select>
 					</div>
@@ -75,7 +75,7 @@
 					<label for="libro" class="col-sm-2 col-form-label">Collocazione</label>
 					<div class="col-sm-1">
 						<select class="form-control" id="collocazione" name="collocazione">
-							<option></option>
+							<option disabled selected value></option>
 							<?php
 								include 'db_connection.php';
 								
@@ -90,7 +90,7 @@
 									echo "<option>None</option>";
 								}
 
-								mysqli_close($conn);
+								mysqli_close($connessione);
 							?>
 						</select>
 					</div>

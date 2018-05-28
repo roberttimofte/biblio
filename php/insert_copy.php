@@ -22,9 +22,7 @@ if (mysqli_num_rows($result1) > 0) {
 	$isbn = "0";
 }
 
-$sql1 = "INSERT INTO biblio_copia (MATCont, INVENTNum, COPIACollocazione, Progressivo, INVENTGen) VALUES ('$libro', '1','$collocazione', '1', '$inv_generale')";
-$sql2 = "INSERT INTO biblio_copiacollocata (Cont, Titolo, Inv, Coll, Prog, ISBN, Expr1) VALUES (1, '$titolo', '$inv_generale', '$collocazione', '1', '$isbn', 1)";
-$sql3 = "INSERT INTO biblio_elencocopie (MATCont, INVENTNum, COPIACollocazione, Progressivo) VALUES ('$libro', '$inv_generale','$collocazione', '$posto')";
+$sql1 = "INSERT INTO biblio_copia(MATCont, INVENTNum, COPIACollocazione, Progressivo, INVENTGen) VALUES ('$libro', '1','$collocazione', '1', '$inv_generale')";
 
 if (mysqli_query($connessione, $sql1)) {
     echo "ok";
