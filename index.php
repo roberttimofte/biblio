@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
 $_SESSION['login_user'] = 0;
 ?>
 <html>
@@ -10,7 +9,7 @@ $_SESSION['login_user'] = 0;
 		<meta charset="UTF-8">
 		
 		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -25,10 +24,16 @@ $_SESSION['login_user'] = 0;
 		
 		<div align="center" style="font-family: sans-serif; font-size: 3em; font-weight: 100; letter-spacing: 0.40em; text-align: center; display: inline-center">
 			<!--<h1 style="color: white">BIBLIO</h1>-->
-			<img src="img/logo.png" width="500px"/>
+			<img src="img/logo2.png" width="500px"/>
 		</div> 
-
-			
+		
+		<!--<div class="box">
+		  <div class="container-1">
+			  <span class="icon"><i class="fa fa-search"></i></span>
+			  <input type="search" id="search" placeholder="Cerca..." />
+		  </div>
+		</div>-->
+		
 		<div class="form-style-6">
 			<h1>Accedi</h1>
 			<form action="php/ldap_login.php" method="POST">
@@ -52,20 +57,13 @@ $_SESSION['login_user'] = 0;
 		
 		<!--<div align="center">
 			<span style="color: #ffffff; text-align: center; font-family: 'Garamond'; font-size: 50px;">Oppure</span>
-		</div>
-		
-		<div class="box">
-		  <div class="container-1">
-			  <span class="icon"><i class="fa fa-search"></i></span>
-			  <input type="search" id="search" placeholder="Cerca..." />
-		  </div>
 		</div>-->
-
-		<!--<script>
+		
+		<script>
 			$(".btn btn-light").click(function() {
 				window.location = "php/inserisci_libro.php";
 			});
-		</script>-->
+		</script>
 
 	</body>
 
