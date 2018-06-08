@@ -41,7 +41,7 @@
 			
 				<div class="form-group row">
 					<label for="titolo" class="col-sm-2 col-form-label">Libro</label>
-					<div class="col-sm-4 ">
+					<div class="col-sm-8">
 						<select class="form-control" id="libri" name="libri">
 							<option disabled selected value></option>
 							<?php
@@ -73,7 +73,7 @@
 				
 				<div class="form-group row">
 					<label for="libro" class="col-sm-2 col-form-label">Collocazione</label>
-					<div class="col-sm-1">
+					<div class="col-sm-2">
 						<select class="form-control" id="collocazione" name="collocazione">
 							<option disabled selected value></option>
 							<?php

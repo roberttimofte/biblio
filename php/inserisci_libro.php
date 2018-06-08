@@ -44,7 +44,7 @@ if(!isset($_SESSION['login_user'])){
 			margin: auto;
 			padding: 0;
 			border: 1px solid #888;
-			width: 75%;
+			width: 65%;
 			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 			-webkit-animation-name: animatetop;
 			-webkit-animation-duration: 0.4s;
@@ -192,7 +192,7 @@ if(!isset($_SESSION['login_user'])){
 							?>
 						</select>
 					</div>
-					<input type="button" id="myBtn" value="Inserisci editrice">	
+					<input type="button" id="myBtn" class="btn btn-secondary" value="Inserisci editrice">	
 				</div>
 				
 				
@@ -220,7 +220,7 @@ if(!isset($_SESSION['login_user'])){
 				
 				<div class="form-group row">
 					<label for="numero_volume" class="col-sm-2 col-form-label">Numero volume</label>
-					<div class="col-sm-1">
+					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="n vol" name="num_volume">
 					</div>
 					<label for="totale_volumi" class="col-sm-2 col-form-label" style="text-align: right">Totale volumi</label>
@@ -245,8 +245,8 @@ if(!isset($_SESSION['login_user'])){
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="inv generale" name="inv">
 					</div>
-					<label for="collocazione" class="col-sm-1 col-form-label">Collocazione</label>
-					<div class="col-sm-1">	
+					<label for="collocazione" class="col-sm-2 col-form-label" style="text-align: right">Collocazione</label>
+					<div class="col-sm-2">	
 						<select class="form-control" id="collocazione" name="collocazione">
 							<option disabled selected value></option>
 							<?php
@@ -266,17 +266,20 @@ if(!isset($_SESSION['login_user'])){
 								mysqli_close($connessione);
 							?>
 						</select>
-					</div>
-					<label for="progr" class="col-sm-1 col-form-label" style="text-align: right">Progr</label>
+					</div>					
+				</div>
+				
+				<div class="form-group row">
+					<label for="progr" class="col-sm-2 col-form-label">Progr</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="progr" name="progr">
 					</div>					
-					<label for="num" class="col-sm-1 col-form-label" style="text-align: right">Num</label>
+					<label for="num" class="col-sm-2 col-form-label" style="text-align: right">Num</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control" placeholder="num" name="num">
 					</div>
 				</div>
-				
+			
 				<div class="form-group row">
 					<label for="autore" class="col-sm-2 col-form-label">Autore</label>
 					<div class="col-sm-8">
@@ -300,7 +303,7 @@ if(!isset($_SESSION['login_user'])){
 							?>
 						</select>
 					</div>
-					<input type="button" id="myBtn2" value="Nuovo autore">
+					<input type="button" id="myBtn2" class="btn btn-secondary" value="Nuovo autore">
 				</div>
 
 				<div class="form-group row">
